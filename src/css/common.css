@@ -1,0 +1,199 @@
+#header{
+    height: 60px;
+    background-color: #5f82aa;
+}
+
+.logo-container{
+    float: left;
+    width: 140px;
+    height: 60px;
+}
+.logo-link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./logo.png);
+}
+
+#main-nav{
+    float: right;
+}
+button:disabled{
+    background-color: #8ea9cd !important;
+}
+
+button:disabled::after{
+    display: none !important;
+}
+
+.transition-enter {
+  opacity: 0.1;
+}
+
+.transition-enter.transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.transition-leave {
+  opacity: 1;
+}
+
+.transition-leave.transition-leave-active {
+  opacity: 0.1;
+  transition: opacity 300ms ease-in;
+}
+
+
+.placeholder-text{
+    color: #000;
+    font: 20px 'Verdana', sans-serif;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.error-msg{
+    color: rgb(255, 0, 0);
+    display: block;
+    font: 12px 'Verdana', sans-serif;
+    position: absolute;
+}
+
+.nav-item{
+    float: left;
+}
+.nav-item a{
+    color: #fff;
+    position: relative;
+    -webkit-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    -ms-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    transition: all 0.3s ;
+    display: block;
+    font: 1.6em 'Verdana', sans-serif;
+    padding: 14px;
+}
+
+.nav-item a:hover, .nav-item .active{
+    background-color: #6ba5c9;
+}
+.nav-item .active::after{
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 7px;
+    width: 100%;
+    left: 0;
+    background-color: #d1e6f4;
+}
+.nav-item a::after{
+    -webkit-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    -ms-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    transition: all 0.3s ;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+    left: 0;
+    background-color: #d1e6f4;
+}
+.InfoWindow{
+    width: 200px;
+}
+.confirm_modal{
+    position: fixed;
+    font: 1em 'Verdana', sans-serif;
+    padding: 50px 30px;
+    z-index: 999;
+    width: 320px;
+    height: 200px;
+    background-color: #fcfcfc;
+    top: -400px;
+    left:calc(50% - 160px);
+    display: none;
+    -webkit-box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+}
+.confrim-text{
+    color: #000;
+}
+.confirm-modal-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+.confirm-modal-button button{
+    width: 130px;
+    margin-right: 10px;
+    display: block;
+    height: 50px;
+    position: relative;
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    cursor: pointer;
+    background-color: #5f82aa;
+    border: none;
+    font: 1.2em 'Verdana', sans-serif;
+    color: #fff;
+}
+
+.confirm-modal-button button::after{
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #afcfd8;
+    bottom: 0;
+    left: 0;
+}
+.confirm-modal-button button:hover::after{
+    height: 7px;
+}
+
+.confirm-modal-button button:hover{
+    background-color:  #6ba5c9;   
+}
+
+
+.nav-item a:hover::after{
+    height: 7px;
+}
+#app{
+    height: 100%;
+}
+.global-container{
+    min-height: 100%; 
+    position: relative;
+    background-color: #fcfcfc;
+    padding-bottom: 180px;
+}
+
+#footer{
+    width: 100%;
+    height: 150px;
+    background-color: #5f82aa;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media(max-width:400px){
+    .logo-container{
+        width: 90px;
+    }
+}

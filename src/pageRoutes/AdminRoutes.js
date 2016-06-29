@@ -1,0 +1,1 @@
+export const AdminRoutes = [{routpath: 'admin/stations', iclass: 'fa-scribd', active: false},{routpath: 'admin/services', iclass: 'fa-wrench', active: false},{routpath: 'admin/mainmechanics', iclass: 'fa-users', active: false}, {routpath: '', iclass: 'fa-sign-out', active: true}];

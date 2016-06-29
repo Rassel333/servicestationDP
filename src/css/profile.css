@@ -1,0 +1,334 @@
+.container-inner-profile{
+    width: 700px;
+    margin:auto;
+}
+
+.profile-info{
+    width: 100%;
+    position: relative;
+    color:#ffffff;
+    font-family:  'Verdana', sans-serif;
+}
+.profile-info i{
+    cursor: pointer;
+}
+.profile-p-info{
+    width: 100%;
+    position: relative;
+    padding: 50px 30px 20px;
+    margin-bottom: 10px;
+    background-color: #a2c2d8;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    -webkit-box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+}
+
+.profile-title{
+    font-size: 1.7em;
+    text-align: center;
+    margin-bottom: 20px;
+} 
+
+
+
+
+.cars-transition-enter {
+  opacity: 0.1;
+}
+
+.cars-transition-enter.cars-transition-enter-active {
+  opacity: 1;
+  transition: opacity 600ms ease-in;
+}
+
+.cars-transition-leave {
+  opacity: 1;
+}
+
+.cars-transition-leave.cars-transition-leave-active {
+  opacity: 0.1;
+  transition: opacity 600ms ease-in;
+}
+
+
+
+
+
+.p-info-row{
+    margin-bottom: 10px;
+}
+.info-title{
+    font-size: 1.5em;
+    padding: 5px;
+    border-bottom: 1px solid #6295b1;
+}
+.info-text{
+    font-size: 1.2em;
+}
+.cars-info-profile{
+    width: 400px;
+   
+}
+.car-info_item-profile{
+    width: 100%;
+    position: relative;
+    background-color: #a2c2d8;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+     -webkit-box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+    padding: 10px 20px;
+    margin-bottom: 5px;
+}
+.car-info-row-profile{
+    padding: 5px;
+}
+.car-info-title-profile{
+    width: 190px;
+    margin-bottom: 5px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: text-top !important;
+}
+.car-info-text-profile{
+    display: inline-block;
+    width: calc(100% - 200px);
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    vertical-align: text-top !important;
+}
+.add-button-profile{
+    margin-top: 10px;
+    width: 300px;
+}
+.add-car-profile{
+    width: 100%;
+    display: block;
+    height: 70px;
+    position: relative;
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    cursor: pointer;
+    background-color: #5f82aa;
+    border: none;
+    font: 1.5em 'Verdana', sans-serif;
+    padding: 15px;
+    color: #fff;
+}
+
+.add-car-profile::after{
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #afcfd8;
+    bottom: 0;
+    left: 0;
+}
+
+.add-car-profile:hover::after{
+    height: 10px;
+}
+.add-car-profile:hover{
+    background-color:  #6ba5c9;   
+    color: #fff;
+}
+.profile-p-info .personal-edit{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 25px;
+}
+.car-info_item-profile .car-edit{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 20px
+}
+.car-info_item-profile .car-delete{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 20px
+}
+
+
+#overlay{
+    z-index:998; 
+	position:fixed;
+	background-color:#000; 
+	opacity:0.6; 
+	-moz-opacity:0.8; 
+	width:100%; 
+	height:100%; 
+	top:0; 
+	left:0;
+	cursor:pointer;
+    display: none;
+}
+
+.personal-edit_modal{
+    position: fixed;
+    padding: 50px 30px;
+    z-index: 999;
+    width: 400px;
+    height: 480px;
+    background-color: #fcfcfc;
+    top: -400px;
+    left:calc(50% - 200px);
+    display: none;
+}
+.car-edit_modal, .car-add_modal{
+    position: fixed;
+    padding: 50px 30px;
+    z-index: 999;
+    width: 400px;
+    height: 550px;
+    background-color: #fcfcfc;
+    top: -550px;
+    left:calc(50% - 200px);
+    display: none;
+}
+
+.personal-edit-modal-row, .car-edit-modal-row, .car-add-modal-row{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.personal-edit-modal-row_title, .car-edit-modal-row_title, .car-add-modal-row_title{
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #51585a;
+    font: 1.3em 'Verdana', sans-serif;
+}
+.personal-edit-modal-row input, .car-edit-modal-row input, .car-add-modal-row input{
+    width: 100%;
+    -webkit-transition: 0.3s all ;
+    -moz-transition: 0.3s all ;
+    -ms-transition: 0.3s all ;
+    -o-transition: 0.3s all ;
+    transition: 0.3s all ;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #baacac;
+    font: 1em 'Verdana', sans-serif;
+    padding: 5px;
+}
+.personal-edit-modal-row input:focus, .car-edit-modal-row input:focus, .car-add-modal-row input:focus{
+    box-shadow: none;
+    outline: none;
+    border-bottom-color: #5f82aa;
+}
+
+.personal-edit-modal-button, .car-edit-modal-button, .car-add-modal-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.personal-edit-modal-button button, .car-edit-modal-button button, .car-add-modal-button button{
+    width: 100px;
+    margin-right: 10px;
+    display: block;
+    height: 50px;
+    position: relative;
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    cursor: pointer;
+    background-color: #5f82aa;
+    border: none;
+    font: 1.2em 'Verdana', sans-serif;
+    color: #fff;
+}
+
+.personal-edit-modal-button button::after, .car-edit-modal-button button::after, .car-add-modal-button button::after{
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #afcfd8;
+    bottom: 0;
+    left: 0;
+}
+
+.personal-edit-modal-button button:hover::after, .car-edit-modal-button button:hover::after,  .car-add-modal-button button:hover::after{
+    height: 7px;
+}
+.personal-edit-modal-button button:hover, .car-edit-modal-button button:hover, .car-add-modal-button button:hover{
+    background-color:  #6ba5c9;   
+    color: #fff;
+}
+
+@media(max-width: 800px){
+    .car-edit_modal, .car-add_modal, .personal-edit_modal{
+        position: absolute;
+    }
+}
+
+
+
+@media(max-width:700px){
+    .container-inner-profile{
+        width: 100%;
+    }
+}
+
+@media(max-width:450px){
+    .cars-info-profile{
+        width: 100%;
+    }
+    .car-info_item-profile{
+        padding: 10px;
+    }
+    .car-info-title-profile{
+        width: 150px;
+    }
+    .car-info-title-profile{
+        font-size: 0.85em;
+    }
+    .info-title{
+        font-size: 1.3em;
+    }
+    .info-text{
+        font-size: 1em;
+    }
+    .add-button-profile{
+        width: 250px;
+        margin: 10px auto 0;
+    }
+    .profile-p-info .personal-edit{
+        position: absolute;
+        right: 5px;
+        top: 20px;
+        font-size: 20px;
+    }
+    .car-edit_modal, .car-add_modal, .personal-edit_modal{
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media(max-width:350px){
+    .profile-title{
+        font-size: 1.5em;
+    }
+}

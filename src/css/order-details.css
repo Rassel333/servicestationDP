@@ -1,0 +1,98 @@
+.container-inner-order-details{
+    width: 700px;
+    margin: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 50px;
+    -webkit-box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+}
+
+.form-container-order-details{
+    margin: auto;
+    width: calc(100% - 50px);
+    position: relative;
+    font: 1.1em 'Verdana', sans-serif;
+    color: #51585a;
+}
+
+.field-row-order-details{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+}
+.detail-title{
+    min-width: 190px;
+    text-align: right;
+    padding-right: 5px;
+}
+.detail-description{
+    display: block;
+    width: 100%;
+}
+
+.order-detail-button{
+    display: inline-block;
+    width: 45%;
+    margin-right: 10px;
+}
+.order-detail-button_item{
+    width: 100%;
+    display: block;
+    height: 50px;
+    position: relative;
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    cursor: pointer;
+    background-color: #5f82aa;
+    border: none;
+    font: 1.2em 'Verdana', sans-serif;
+    color: #fff;
+}
+.order-detail-button_item::after{-webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #afcfd8;
+    bottom: 0;
+    left: 0;
+}
+.order-detail-button_item:hover::after{
+    height: 7px;
+}
+.order-detail-button_item:hover{
+background-color:  #6ba5c9;   
+    color: #fff;
+}
+
+@media(max-width:710px){
+    .container-inner-order-details{
+        width: 100%;
+        padding: 10px;
+    }
+    .detail-title{
+    min-width: 50%;
+    text-align: right;
+    padding-right: 5px;
+    }
+    .form-container-order-details{
+        font-size: 0.9em ;
+    }
+}
+
+@media print{
+    body{
+    visibility: hidden;
+    }
+    .main-container-order-details{
+        visibility: visible;
+    }
+
+}

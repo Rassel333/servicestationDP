@@ -1,0 +1,372 @@
+.container-inner-umorders {
+    width: 100%;
+}
+
+.user-orders-container,
+.mech-orders-container {
+    width: 90%;
+    margin: 70px auto;
+}
+
+.toolbar {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+.toolbar-inner {
+    width: 100%;
+    display: flex;
+    padding: 0 0 0 10px;
+    ;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #5f82aa;
+}
+
+.date-range-filter {
+    display: flex;
+    width: 50%;
+    flex-flow: row;
+}
+
+.dp {
+    padding: 10px 10px 0;
+    min-width: 200px;
+    display: flex;
+}
+
+.range-title {
+    padding: 5px 5px;
+    color: #fff;
+    width: 50px;
+    font: 1em 'Verdana', sans-serif;
+}
+
+.status-filter-item {
+    color: #fff;
+    font: 1em 'Verdana', sans-serif;
+    display: block;
+    float: left;
+    padding: 20px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.status-filter-item:hover {
+    text-decoration: none;
+    background-color: #6ba5c9;
+    color: #fff;
+}
+
+.status-filter-item::after {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+    left: 0;
+    background-color: #d1e6f4;
+}
+
+.status-filter-item:hover::after {
+    height: 7px;
+}
+
+.bootstrap-datetimepicker-widget,
+.date-pick,
+.input-group.date {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+.user-orders,
+.mech-orders {
+    width: 100%;
+    padding: 10px;
+}
+
+.user-orders-table,
+.mech-orders-table {
+    width: 100%;
+    text-align: left;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.26);
+}
+
+.user-orders-table,
+.mech-orders-table {
+    font-family: "Verdana", sans-serif;
+    font-size: 0.9em;
+    color: #51585a;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* Zebra striping */
+
+.user-orders-table tr:nth-of-type(odd),
+.mech-orders-table tr:nth-of-type(odd) {
+    background: #d1e6f4;
+}
+
+.user-orders-table th,
+.mech-orders-table th {
+    background: #5f82aa;
+    color: white;
+    font-weight: bold;
+}
+
+.user-orders-table td,
+.user-orders-table th,
+.mech-orders-table td,
+.mech-orders-table th {
+    padding: 6px;
+    text-align: left;
+}
+
+.user-orders-table tr,
+.mech-orders-table tr {
+    cursor: pointer;
+    border-bottom: 1px solid rgba(95, 130, 170, 0.18);
+}
+
+.user-orders-table td:nth-of-type(1),
+.user-orders-table td:nth-of-type(2),
+.mech-orders-table td:nth-of-type(1),
+.mech-orders-table td:nth-of-type(2) {
+    width: 20%;
+}
+
+.user-orders-table td:nth-of-type(3),
+.mech-orders-table td:nth-of-type(3) {
+    width: 30%;
+}
+
+.user-orders-table td:nth-of-type(4),
+.user-orders-table td:nth-of-type(5),
+.mech-orders-table td:nth-of-type(4),
+.mech-orders-table td:nth-of-type(5) {
+    width: 15%;
+}
+
+#overlay {
+    z-index: 998;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.6;
+    -moz-opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.modal-invoice,
+.mech-modal-win {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background-color: #fff;
+    width: 320px;
+    top: -400px;
+    opacity: 0;
+    left: calc(50% - 160px);
+    padding: 30px 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.user-invoice-table,
+.user-order-descr-table {
+    font-size: 1em;
+}
+
+.invoice-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    margin-left: 30px;
+}
+
+.user-invoice-table td,
+.user-order-descr-table td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.inv-title,
+.user-order-descr-title {
+    text-align: right;
+    width: 40%;
+}
+
+#mech-work {
+    resize: none;
+    display: block;
+    width: 100%;
+}
+
+.print-button-wrapper,
+.mech-order_OK {
+    float: right;
+    margin-right: 10px;
+    width: 50%;
+}
+
+.print-invoice,
+.mech-order-button {
+    width: 100%;
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: #5f82aa;
+    border: none;
+    font: 1.5em 'Verdana', sans-serif;
+    padding: 10px;
+    color: #fff;
+}
+
+.print-invoice::after,
+.mech-order-button::after {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #afcfd8;
+    bottom: 0;
+    left: 0;
+}
+
+.print-invoice:hover::after,
+.mech-order-button:hover::after {
+    height: 6px;
+}
+
+.print-invoice:hover,
+.mech-order-button:hover {
+    background-color: #6ba5c9;
+    color: #fff;
+}
+
+@media(max-width:700px) {
+    .toolbar-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-orders-container,
+    .mech-orders-container {
+        width: 100%;
+    }
+    .date-range-filter {
+        min-width: 100%;
+    }
+    .dp {
+        width: 50%;
+    }
+    .user-orders-table table,
+    .user-orders-table thead,
+    .user-orders-table tbody,
+    .user-orders-table th,
+    .user-orders-table td,
+    .user-orders-table tr,
+    .mech-orders-table table,
+    .mech-orders-table thead,
+    .mech-orders-table tbody,
+    .mech-orders-table th,
+    .mech-orders-table td,
+    .mech-orders-table tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .user-orders-table thead tr,
+    .mech-orders-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .user-orders-table tr,
+    .mech-orders-table tr {
+        border: none;
+    }
+    .user-orders-table td,
+    .mech-orders-table td {
+        /* Behave  like a "row" */
+        border: none;
+        min-width: 100%;
+        /*border-bottom: 1px solid #eee; */
+        position: relative;
+        padding-left: 50%;
+    }
+    .user-orders-table td:before,
+    .mech-orders-table td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    /*
+		Label the data
+		*/
+    .user-orders-table td:nth-of-type(1):before,
+    .mech-orders-table td:nth-of-type(1):before {
+        content: "Brand";
+    }
+    .user-orders-table td:nth-of-type(2):before,
+    .mech-orders-table td:nth-of-type(2):before {
+        content: "Model";
+    }
+    .user-orders-table td:nth-of-type(3):before,
+    .mech-orders-table td:nth-of-type(3):before {
+        content: "Date of completion";
+    }
+    .user-orders-table td:nth-of-type(4):before,
+    .mech-orders-table td:nth-of-type(4):before {
+        content: "Cost";
+    }
+    .user-orders-table td:nth-of-type(5):before,
+    .mech-orders-table td:nth-of-type(5):before {
+        content: "Status";
+    }
+}
+
+@media(max-width:500px) {
+    .date-range-filter {
+        flex-direction: column;
+    }
+    .user-orders-table,
+    .mech-orders-table {
+        font-size: 0.8em;
+    }
+    .dp {
+        width: 100%;
+        justify-content: center;
+    }
+}

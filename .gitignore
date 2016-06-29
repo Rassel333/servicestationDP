@@ -1,0 +1,12 @@
+# Webstorm
+*.iml
+.idea/
+
+# Compiled output
+dist/bundle.js
+
+# Dependencies
+/node_modules
+
+# Mac OS X
+.DS_Store

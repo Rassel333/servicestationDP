@@ -1,0 +1,304 @@
+.container-inner-admin{
+    width: 850px;
+    margin:  30px auto;
+    position: relative;
+    color:#ffffff;
+    font-family:  'Verdana', sans-serif;
+    
+}
+#overlay1, #overlay2, #overlay3 {
+    z-index:998; 
+    position:fixed;
+    background-color:#000; 
+    opacity:0.6; 
+    -moz-opacity:0.8; 
+    width:100%; 
+    height:100%; 
+    top:0; 
+    left:0;
+    cursor:pointer;
+    display: none;
+}
+.add-button-admin{
+    margin: 10px auto;
+    width: 80%;
+}
+
+
+.stations-transition-enter, .services-transition-enter {
+  opacity: 0.1;
+}
+
+.stations-transition-enter.stations-transition-enter-active, .services-transition-enter.services-transition-enter-active {
+  opacity: 1;
+  transition: opacity 600ms ease-in;
+}
+
+.stations-transition-leave,.services-transition-leave {
+  opacity: 1;
+}
+
+.stations-transition-leave.stations-transition-leave-active, .services-transition-leave.services-transition-leave-active {
+  opacity: 0.1;
+  transition: opacity 600ms ease-in;
+}
+
+
+
+
+
+
+.add-service, .add-station, .add-mechanic{
+    width: 100%;
+    display: block;
+    height: 70px;
+    position: relative;
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    cursor: pointer;
+    background-color: #5f82aa;
+    border: none;
+    font: 1.2em 'Verdana', sans-serif;
+    padding: 15px;
+    color: #fff;
+}
+.add-service::after, .add-station::after, .add-mechanic::after{
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #afcfd8;
+    bottom: 0;
+    left: 0;
+}
+.add-service:hover::after, .add-station:hover::after, .add-mechanic:hover::after{
+    height: 10px;
+}
+.add-service:hover, .add-station:hover, .add-mechanic:hover{
+    background-color:  #6ba5c9;   
+    color: #fff;
+}
+
+
+/*-----------------------------------------------------------------*/
+.services-info, .mechanics-info, .stations-info{
+    width: 100%;
+    position: relative;
+    
+   
+}
+.service-info_item, .station-info_item, .mechanic-info_item{
+    -webkit-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    -ms-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    transition: all 0.3s ;
+    width: 400px;
+    float: left;
+    position: relative;
+    background-color: #a2c2d8;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+     -webkit-box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.26);
+    padding: 10px 40px;
+    margin-bottom: 5px;
+}
+.service-info_item:nth-child(odd), .station-info_item:nth-child(odd), .mechanic-info_item:nth-child(odd){
+    margin-right: 20px;
+}
+.service-info_item:nth-child(odd), .station-info_item:nth-child(odd), .mechanic-info_item:nth-child(odd){
+    float: right;
+}
+
+.service-info-row, .station-info-row, .mechanic-info-row{
+    padding: 5px;
+}
+.service-info-title, .station-info-title, .mechanic-info-title{
+    width: 130px;
+    margin-bottom: 5px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: text-top !important;
+}
+.service-info-text, .station-info-text, .mechanic-info-text{
+    display: inline-block;
+    width: calc(100% - 130px);
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    vertical-align: text-top !important;
+}
+
+.service-info_item .service-edit, .station-info_item .station-edit, .mechanic-info_item .mechanic-edit{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    top: 10px;
+    font-size: 15px
+}
+.service-info_item .service-delete, .station-info_item .station-delete, .mechanic-info_item .mechanic-delete{
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    top: 10px;
+    font-size: 20px
+}
+
+
+#overlay{
+    z-index:998; 
+    position:fixed;
+    background-color:#000; 
+    opacity:0.6; 
+    -moz-opacity:0.8; 
+    width:100%; 
+    height:100%; 
+    top:0; 
+    left:0;
+    cursor:pointer;
+    display: none;
+}
+
+
+.service-edit_modal, .service-add_modal,.station-edit_modal, .station-add_modal, .mechanic-edit_modal, .mechanic-add_modal{
+    position: fixed;
+    padding: 50px 30px 20px;
+    z-index: 999;
+    width: 400px;
+    background-color: #fcfcfc;
+    top: -750px;
+    left:calc(50% - 200px);
+    display: none;
+}
+
+.service-edit-modal-row, .service-add-modal-row, .station-edit-modal-row, .station-add-modal-row, .mechanic-edit-modal-row, .mechanic-add-modal-row{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.service-edit-modal-row_title, .service-add-modal-row_title,.station-edit-modal-row_title, .station-add-modal-row_title, .mechanic-edit-modal-row_title, .mechanic-add-modal-row_title{
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #51585a;
+    font: 1.3em 'Verdana', sans-serif;
+}
+.service-edit-modal-row input, .service-add-modal-row input, .station-edit-modal-row input, .station-add-modal-row input, .mechanic-edit-modal-row input, .mechanic-add-modal-row input{
+    width: 100%;
+    -webkit-transition: 0.3s all ;
+    -moz-transition: 0.3s all ;
+    -ms-transition: 0.3s all ;
+    -o-transition: 0.3s all ;
+    transition: 0.3s all ;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #baacac;
+    font: 1em 'Verdana', sans-serif;
+    padding: 5px;
+}
+.station-edit-modal-row input:focus, .station-add-modal-row input:focus, .mechanic-edit-modal-row input:focus, .mechanic-add-modal-row input:focus, .service-edit-modal-row input:focus, .service-add-modal-row input:focus{
+    box-shadow: none;
+    outline: none;
+    border-bottom-color: #5f82aa;
+}
+
+.station-edit-modal-button, .station-add-modal-button, .mechanic-edit-modal-button, .mechanic-add-modal-button, .service-edit-modal-button, .service-add-modal-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.station-edit-modal-button button, .station-add-modal-button button, .mechanic-edit-modal-button button, .mechanic-add-modal-button button, .service-edit-modal-button button, .service-add-modal-button button{
+    width: 100px;
+    margin-right: 10px;
+    display: block;
+    height: 50px;
+    position: relative;
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    cursor: pointer;
+    background-color: #5f82aa;
+    border: none;
+    font: 1.2em 'Verdana', sans-serif;
+    color: #fff;
+}
+
+.station-edit-modal-button button::after, .station-add-modal-button button::after, .mechanic-edit-modal-button button::after, .mechanic-add-modal-button button::after, .service-edit-modal-button button::after, .service-add-modal-button button::after{
+    -webkit-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    transition: all 0.3s ;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #afcfd8;
+    bottom: 0;
+    left: 0;
+}
+
+.station-edit-modal-button button:hover::after,  .station-add-modal-button button:hover::after, .mechanic-edit-modal-button button:hover::after,  .mechanic-add-modal-button button:hover::after, .service-edit-modal-button button:hover::after,  .service-add-modal-button button:hover::after{
+    height: 7px;
+}
+.station-edit-modal-button button:hover, .station-add-modal-button button:hover, .mechanic-edit-modal-button button:hover, .mechanic-add-modal-button button:hover, .service-edit-modal-button button:hover, .service-add-modal-button button:hover{
+    background-color:  #6ba5c9;   
+    color: #fff;
+}
+
+
+@media(max-width:860px){
+    .container-inner-admin{
+        width: 100%;
+    }
+    .station-info_item, .mechanic-info_item, .service-info_item{
+        clear: both;
+    }
+
+    .mechanic-info_item, .station-info_item, .service-info_item{
+        width: 100%;
+   
+    }
+}
+
+@media(max-width: 800px){
+    .station-edit_modal, .station-add_modal, .mechanic-edit_modal, .mechanic-add_modalmechanic, .service-edit_modal, .service-add_modal{
+        position: absolute;
+    }
+}
+
+
+
+
+@media(max-width:450px){
+    .station-info_item, .mechanic-info_item, .service-info_item{
+        padding: 10px;
+    }
+    .station-info-title, .mechanic-info-title, .service-info-title{
+        width: 150px;
+        font-size: 0.85em;
+    }
+           
+    
+    .add-button-admin{
+        width: 100%;
+    }
+    
+    .station-edit_modal, .station-add_modal,.mechanic-edit_modal, .mechanic-add_modal, .service-edit_modal, .service-add_modal{
+        width: 100%;
+        left: 0;
+    }
+}
+

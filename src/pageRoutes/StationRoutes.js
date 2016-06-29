@@ -1,0 +1,1 @@
+export const StationRoutes = [{routpath: 'station/mechanics', iclass: 'fa-users', active: true}, {routpath: 'station', iclass: 'fa-envelope-o', active: true}, {routpath: '', iclass: 'fa-sign-out', active: true}];
